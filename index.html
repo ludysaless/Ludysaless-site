@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Ludy Sales — conteúdos exclusivos e principais links.">
+<title>Ludy Sales | Conteúdos Exclusivos</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#090909;color:#fff;min-height:100vh}
+main{width:min(100%,520px);margin:auto;padding:42px 20px;text-align:center}
+.avatar{width:104px;height:104px;border-radius:50%;margin:auto auto 16px;border:2px solid #ffffff44;display:grid;place-items:center;background:linear-gradient(145deg,#292929,#0f0f0f);font-size:32px;font-weight:800}
+h1{font-size:28px;margin:0 0 7px}.tag{color:#aaa;font-size:14px;line-height:1.5;margin:0 auto 24px}
+.badge{display:inline-block;border:1px solid #ffffff25;border-radius:999px;padding:7px 12px;font-size:11px;color:#ddd;margin-bottom:14px}
+.links{display:grid;gap:12px}a{display:flex;align-items:center;justify-content:center;min-height:58px;padding:15px 18px;border-radius:15px;color:#fff;text-decoration:none;font-weight:800;border:1px solid #ffffff18;background:#171717}
+a:hover{background:#222;transform:translateY(-1px)}.primary{background:#fff;color:#080808;border-color:#fff}
+.icon{margin-right:9px;font-size:18px}footer{margin-top:28px;color:#666;font-size:11px}
+.age{position:fixed;inset:0;z-index:5;background:rgba(0,0,0,.96);display:grid;place-items:center;padding:24px}
+.age-card{width:min(100%,410px);background:#111;border:1px solid #ffffff18;border-radius:22px;padding:28px;text-align:center}
+.age-card h2{margin:0 0 10px;font-size:24px}.age-card p{color:#aaa;line-height:1.5;font-size:14px}
+.age-actions{display:grid;gap:10px;margin-top:20px}button{border:0;border-radius:13px;padding:15px;font-weight:800;font-size:15px}.yes{background:#fff;color:#000}.no{background:#222;color:#fff}.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="age" id="ageGate"><div class="age-card">
+<div class="badge">CONTEÚDO +18</div><h2>Você tem 18 anos ou mais?</h2>
+<p>Esta página reúne links para conteúdos destinados exclusivamente a maiores de 18 anos.</p>
+<div class="age-actions"><button class="yes" onclick="enterSite()">SIM, TENHO 18+</button><button class="no" onclick="leaveSite()">NÃO</button></div>
+</div></div>
+<main>
+<div class="avatar">LS</div>
+<h1>LUDY SALES</h1>
+<p class="tag">✨ Meus conteúdos exclusivos e principais links em um só lugar.</p>
+<div class="links">
+<a class="primary" href="https://alllink.com.br/ludysaless" target="_blank" rel="noopener" onclick="trackClick('conteudo')"><span class="icon">🔞</span> ACESSAR MEUS CONTEÚDOS</a>
+<a href="#" onclick="return false"><span class="icon">💬</span> WHATSAPP — COLOQUE SEU LINK</a>
+<a href="#" onclick="return false"><span class="icon">📸</span> INSTAGRAM — COLOQUE SEU LINK</a>
+<a href="#" onclick="return false"><span class="icon">⭐</span> GRUPO VIP — COLOQUE SEU LINK</a>
+</div>
+<footer>© 2026 Ludy Sales • Todos os direitos reservados</footer>
+</main>
+<script>
+function enterSite(){localStorage.setItem('ageVerified','1');document.getElementById('ageGate').classList.add('hidden')}
+function leaveSite(){window.location.href='https://www.google.com/'}
+if(localStorage.getItem('ageVerified')==='1')document.getElementById('ageGate').classList.add('hidden')
+function trackClick(name){console.log('Clique:',name)}
+</script>
+</body></html>
