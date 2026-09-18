@@ -46,6 +46,17 @@ linear-gradient(180deg,rgba(0,0,0,.28),rgba(5,3,1,.56) 52%,rgba(5,3,1,.94) 100%)
 .features{margin-top:25px;padding-top:21px}.feature{font-size:8px;letter-spacing:.6px;padding:0 3px}.symbol{font-size:23px}.closing{font-size:11px;letter-spacing:4.5px}
 }
 </style>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = 'https://qqgjehqppizjyeiwincx.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_nyP3mE5znrIWazMCjNp9NA_I0Rt34g9';
+
+const supabaseClient = supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
+</script>
 </head>
 <body>
 <video class="bg" autoplay muted loop playsinline preload="metadata"><source src="fundo.mp4" type="video/mp4"></video>
